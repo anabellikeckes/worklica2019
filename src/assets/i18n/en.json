@@ -2,6 +2,11 @@
     "FLOWER_TYPE": {
         "TITLE": "Shop by Type",
         "ID": "Id",
-        "TYPE": "Type"
+        "TYPE": "Type",
+        "TYPES": {
+            "BOUQUET": "Bouquet",
+            "JAR": "Jar",
+            "SEEDLING": "Seedling"
+        }
     }
 }

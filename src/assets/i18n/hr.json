@@ -2,6 +2,11 @@
     "FLOWER_TYPE": {
         "TITLE": "Kupnja po tipu",
         "ID": "Id",
-        "TYPE": "Tip"
+        "TYPE": "Tip",
+        "TYPES": {
+            "BOUQUET": "Buket",
+            "JAR": "Tagla",
+            "SEEDLING": "Sjemenjače"
+        }
     }
 }
