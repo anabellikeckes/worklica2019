@@ -7,6 +7,14 @@
             "BOUQUET": "Buket",
             "JAR": "Tagla",
             "SEEDLING": "Sjemenjače"
-        }
+        },
+        "CHOOSE": "Choose"
+    },
+    "FLOWER" : {
+        "ID": "Id",
+        "NAME": "Naziv",
+        "PRICE": "Cijena",
+        "IN_STOCK": "Na zalihi",
+        "BUY": "Kupi"
     }
 }

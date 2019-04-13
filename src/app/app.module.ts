@@ -8,6 +8,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FlowerTypeComponent } from './flower-type/flower-type.component';
+import { FlowersComponent } from './flowers/flowers.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -16,7 +17,8 @@ export function HttpLoaderFactory(http: HttpClient) {
 @NgModule({
   declarations: [
     AppComponent,
-    FlowerTypeComponent
+    FlowerTypeComponent,
+    FlowersComponent
   ],
   imports: [
     BrowserModule,

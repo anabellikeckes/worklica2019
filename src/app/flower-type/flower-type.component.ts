@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { FlowerType } from '../shared/flower-type';
 import { TranslateService, LangChangeEvent } from '@ngx-translate/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'flower-type-component',
@@ -12,7 +13,10 @@ export class FlowerTypeComponent implements OnInit {
 
   items: Array<FlowerType>;
 
-  constructor(private translateService: TranslateService) { }
+  constructor(
+    private translateService: TranslateService,
+    private router: Router
+    ) { }
 
   ngOnInit(): void {
     this.translateService.get('FLOWER_TYPE.TYPES').subscribe(res => {
@@ -32,4 +36,7 @@ export class FlowerTypeComponent implements OnInit {
     });
   }
 
+  buy() {
+    this.router.navigate(['flowers-component']);
+  }
 }

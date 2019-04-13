@@ -7,6 +7,14 @@
             "BOUQUET": "Bouquet",
             "JAR": "Jar",
             "SEEDLING": "Seedling"
-        }
+        },
+        "CHOOSE": "Choose"
+    },
+    "FLOWER" : {
+        "ID": "Id",
+        "NAME": "Name",
+        "PRICE": "Price",
+        "IN_STOCK": "In stock",
+        "BUY": "Buy"
     }
 }
