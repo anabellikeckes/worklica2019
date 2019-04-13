@@ -4,9 +4,9 @@ import { FlowerTypeComponent } from './flower-type/flower-type.component';
 import { FlowersComponent } from './flowers/flowers.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'flower-type-component', pathMatch: 'full' },
-  { path: 'flower-type-component', component: FlowerTypeComponent },
-  { path: 'flowers-component', component: FlowersComponent }
+  { path: '', redirectTo: 'flower-type', pathMatch: 'full' },
+  { path: 'flower-type', component: FlowerTypeComponent },
+  { path: 'flowers', component: FlowersComponent }
 
 ];
 

@@ -37,6 +37,6 @@ export class FlowerTypeComponent implements OnInit {
   }
 
   buy() {
-    this.router.navigate(['flowers-component']);
+    this.router.navigate(['flowers']);
   }
 }
