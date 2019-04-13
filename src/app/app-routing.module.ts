@@ -3,8 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { FlowerTypeComponent } from './flower-type/flower-type.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'flower-type-component', pathMatch: 'full' },
-  { path: 'flower-type-component', component: FlowerTypeComponent }
+  { path: '', redirectTo: 'flower-type', pathMatch: 'full' },
+  { path: 'flower-type', component: FlowerTypeComponent }
 ];
 
 @NgModule({
