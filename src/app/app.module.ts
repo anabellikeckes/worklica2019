@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FlowerTypeComponent } from './flower-type/flower-type.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FlowerTypeComponent
   ],
   imports: [
     BrowserModule,
