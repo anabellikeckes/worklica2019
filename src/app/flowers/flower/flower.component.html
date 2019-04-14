@@ -1,0 +1,44 @@
+<form class="form" [formGroup]="flowerForm" *ngIf="flowerForm">
+    <div class="form-group">
+        <label for="name">{{'FLOWER.NAME' | translate}}</label>
+        <input type="text" class="form-control" id="name" readonly formControlName="name">
+    </div>
+    <div class="form-group">
+        <label for="price">{{'FLOWER.PRICE' | translate}}</label>
+        <input type="number" class="form-control" id="price" readonly formControlName="price">
+    </div>
+    <div class="form-group">
+        <label for="inStock">{{'FLOWER.IN_STOCK' | translate}}</label>
+        <input type="number" class="form-control" id="inStock" readonly formControlName="inStock">
+    </div>
+    <div class="form-group">
+        <label for="amount">{{'FLOWER.AMOUNT' | translate}}</label>
+        <select class="custom-select form-control" id="amountDropdown" formControlName="amount" required>
+            <option value="0">Choose...</option>
+            <option *ngFor="let number of amount" [ngValue]="number">{{number}}</option>
+        </select>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+        <label class="form-check-label" for="defaultCheck1">
+            <i class="fa fa-circle" style="color: blue"></i>
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+        <label class="form-check-label" for="defaultCheck1">
+            <i class="fa fa-circle" style="color: red"></i>
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+        <label class="form-check-label" for="defaultCheck1">
+            <i class="fa fa-circle" style="color: white"></i>
+        </label>
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="buy()">{{'FLOWER.BUY' | translate}}</button>
+    <button type="button" class="btn btn-secondary">{{'FLOWER.CANCEL' | translate}}</button>
+</form>
+<div class="image">
+    <i class="fa fa-leaf"></i>
+</div>

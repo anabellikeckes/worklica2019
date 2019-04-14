@@ -11,6 +11,8 @@ import { Flower } from '../shared/flower';
 export class FlowersComponent implements OnInit {
 
     items: Array<Flower>;
+    visible: boolean;
+    selectedFlower: Flower;
 
     constructor(
         private translateService: TranslateService,
@@ -20,7 +22,7 @@ export class FlowersComponent implements OnInit {
     ngOnInit(): void {
         this.translateService.get('FLOWER_TYPE.TYPES').subscribe(res => {
             this.items = [
-                { id: 1, name: 'Rose', price: 10, colors: ['blue', 'white', 'red'], inStock: 0  },
+                { id: 1, name: 'Rose', price: 10, colors: ['blue', 'white', 'red'], inStock: 0 },
                 { id: 2, name: 'Tulip', price: 8, colors: ['violet', 'white', 'pink'], inStock: 5 }
             ];
         });
@@ -28,5 +30,13 @@ export class FlowersComponent implements OnInit {
 
     return() {
         this.router.navigate(['']);
+    }
+
+    buy(item: Flower) {
+        this.visible = true;
+        this.selectedFlower = item;
+    }
+    onUpdateFlowerValues() {
+        // update items
     }
 }

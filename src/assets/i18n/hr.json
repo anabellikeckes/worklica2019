@@ -15,6 +15,8 @@
         "NAME": "Naziv",
         "PRICE": "Cijena",
         "IN_STOCK": "Na zalihi",
-        "BUY": "Kupi"
+        "BUY": "Kupi",
+        "CANCEL": "Odustani",
+        "AMOUNT": "Količina"
     }
 }
