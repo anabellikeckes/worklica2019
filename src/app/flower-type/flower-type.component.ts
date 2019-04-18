@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { FlowerType } from '../shared/flower-type';
+import { FlowerType } from '../shared/models/flower-type';
 import { TranslateService, LangChangeEvent } from '@ngx-translate/core';
 import { Router } from '@angular/router';
 

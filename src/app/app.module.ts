@@ -12,6 +12,7 @@ import { AppComponent } from './app.component';
 import { FlowerTypeComponent } from './flower-type/flower-type.component';
 import { FlowersComponent } from './flowers/flowers.component';
 import { FlowerComponent } from './flowers/flower/flower.component';
+import { ColorDirective } from './shared/directives/color.directive';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -22,7 +23,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     AppComponent,
     FlowerTypeComponent,
     FlowersComponent,
-    FlowerComponent
+    FlowerComponent,
+    ColorDirective
   ],
   imports: [
     BrowserModule,

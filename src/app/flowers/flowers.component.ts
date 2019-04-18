@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
-import { Flower } from '../shared/flower';
+import { Flower } from '../shared/models/flower';
 
 @Component({
     selector: 'flowers-component',
@@ -22,8 +22,8 @@ export class FlowersComponent implements OnInit {
     ngOnInit(): void {
         this.translateService.get('FLOWER_TYPE.TYPES').subscribe(res => {
             this.items = [
-                { id: 1, name: 'Rose', price: 10, colors: ['pink', 'yellow', 'red'], inStock: 0 },
-                { id: 2, name: 'Tulip', price: 8, colors: ['violet', 'yellow', 'red'], inStock: 5 }
+                { id: 1, name: 'Rose', price: 10, color: 'red', inStock: 0 },
+                { id: 2, name: 'Tulip', price: 8, color: 'violet', inStock: 5 }
             ];
         });
     }

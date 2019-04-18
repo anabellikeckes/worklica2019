@@ -18,18 +18,10 @@
             <option *ngFor="let number of amount" [ngValue]="number">{{number}}</option>
         </select>
     </div>
-    <div class="form-check" formArrayName="colors">
-        <div *ngFor="let color of flowerForm.controls.colors.controls; let i = index">
-            <input type="radio" [formControlName]="i" class="form-check-input" [id]="i">
-            <label class="form-check-label" [for]="i">
-                <i class="fa fa-circle" [ngStyle]="{'color': flower?.colors[i]}"></i>
-            </label>
-        </div>
-    </div>
     <!-- <div *ngIf="!flowerForm.valid">At least one order must be selected</div> -->
     <button type="submit" class="btn btn-primary" (click)="buy()">{{'FLOWER.BUY' | translate}}</button>
-    <button type="button" class="btn btn-secondary">{{'FLOWER.CANCEL' | translate}}</button>
+    <button type="button" class="btn btn-secondary" (click)="cancel()">{{'FLOWER.CANCEL' | translate}}</button>
 </form>
 <div class="image">
-    <i class="fa fa-leaf"></i>
+    <i class="fa fa-leaf" myColor="{{flowerForm.controls.color.value}}"></i>
 </div>

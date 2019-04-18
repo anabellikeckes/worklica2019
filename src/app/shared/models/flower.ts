@@ -3,5 +3,5 @@ export class Flower {
     name: string;
     inStock: number;
     price: number;
-    colors: Array<string>;
+    color: string;
 }
