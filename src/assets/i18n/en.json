@@ -15,6 +15,7 @@
         "NAME": "Name",
         "PRICE": "Price",
         "IN_STOCK": "In stock",
+        "COLOR": "Color",
         "BUY": "Buy"
     }
 }
