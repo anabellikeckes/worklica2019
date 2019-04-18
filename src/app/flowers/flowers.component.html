@@ -7,6 +7,7 @@
         <th scope="col">{{'FLOWER.NAME' | translate}}</th>
         <th scope="col">{{'FLOWER.PRICE' | translate}}</th>
         <th scope="col">{{'FLOWER.IN_STOCK' | translate}}</th>
+        <th scope="col">{{'FLOWER.COLOR' | translate}}</th>
         <th scope="col"></th>
       </tr>
     </thead>
@@ -16,7 +17,8 @@
         <td>{{item.name}}</td>
         <td>{{item.price | currency:'GBP'}}</td>
         <td>{{item.inStock}}</td>
-        <td><button *ngIf="item.inStock > 0" type="button" class="btn btn-outline-info" (click)="buy(item)">{{'FLOWER.BUY' | translate}}</button></td>
+        <td><i class="fa fa-circle" [ngStyle]="{'color': item.color}"></i></td>
+        <td><button *ngIf="item.inStock > 0" type="button" class="btn btn-outline-info">{{'FLOWER.BUY' | translate}}</button></td>
       </tr>
     </tbody>
   </table>

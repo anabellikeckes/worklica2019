@@ -14,9 +14,10 @@
         "ID": "Id",
         "NAME": "Naziv",
         "PRICE": "Cijena",
+        "AMOUNT": "Količina",
         "IN_STOCK": "Na zalihi",
+        "COLOR": "Boja",
         "BUY": "Kupi",
-        "CANCEL": "Odustani",
-        "AMOUNT": "Količina"
+        "CANCEL": "Odustani"
     }
 }
