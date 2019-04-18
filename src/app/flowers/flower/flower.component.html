@@ -13,29 +13,20 @@
     </div>
     <div class="form-group">
         <label for="amount">{{'FLOWER.AMOUNT' | translate}}</label>
-        <select class="custom-select form-control" id="amountDropdown" formControlName="amount" required>
+        <select class="custom-select form-control" id="amountDropdown" formControlName="amount">
             <option value="0">Choose...</option>
             <option *ngFor="let number of amount" [ngValue]="number">{{number}}</option>
         </select>
     </div>
-    <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-        <label class="form-check-label" for="defaultCheck1">
-            <i class="fa fa-circle" style="color: blue"></i>
-        </label>
+    <div class="form-check" formArrayName="colors">
+        <div *ngFor="let color of flowerForm.controls.colors.controls; let i = index">
+            <input type="radio" [formControlName]="i" class="form-check-input" [id]="i">
+            <label class="form-check-label" [for]="i">
+                <i class="fa fa-circle" [ngStyle]="{'color': flower?.colors[i]}"></i>
+            </label>
+        </div>
     </div>
-    <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-        <label class="form-check-label" for="defaultCheck1">
-            <i class="fa fa-circle" style="color: red"></i>
-        </label>
-    </div>
-    <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-        <label class="form-check-label" for="defaultCheck1">
-            <i class="fa fa-circle" style="color: white"></i>
-        </label>
-    </div>
+    <!-- <div *ngIf="!flowerForm.valid">At least one order must be selected</div> -->
     <button type="submit" class="btn btn-primary" (click)="buy()">{{'FLOWER.BUY' | translate}}</button>
     <button type="button" class="btn btn-secondary">{{'FLOWER.CANCEL' | translate}}</button>
 </form>

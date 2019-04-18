@@ -22,8 +22,8 @@ export class FlowersComponent implements OnInit {
     ngOnInit(): void {
         this.translateService.get('FLOWER_TYPE.TYPES').subscribe(res => {
             this.items = [
-                { id: 1, name: 'Rose', price: 10, colors: ['blue', 'white', 'red'], inStock: 0 },
-                { id: 2, name: 'Tulip', price: 8, colors: ['violet', 'white', 'pink'], inStock: 5 }
+                { id: 1, name: 'Rose', price: 10, colors: ['pink', 'yellow', 'red'], inStock: 0 },
+                { id: 2, name: 'Tulip', price: 8, colors: ['violet', 'yellow', 'red'], inStock: 5 }
             ];
         });
     }
@@ -36,7 +36,10 @@ export class FlowersComponent implements OnInit {
         this.visible = true;
         this.selectedFlower = item;
     }
-    onUpdateFlowerValues() {
+    onUpdateFlowerValues(updatedFlower: Flower) {
+        const findIndex = this.items.findIndex((obj => obj.id === updatedFlower.id));
         // update items
+        this.items[findIndex] = updatedFlower;
+        this.visible = false;
     }
 }
