@@ -20,7 +20,7 @@ export class FlowerComponent implements OnInit {
                 name: new FormControl(this.flower.name),
                 price: new FormControl(this.flower.price),
                 inStock: new FormControl(this.flower.inStock),
-                amount: new FormControl(0, Validators.required),
+                amount: new FormControl('', [Validators.required]),
                 color: new FormControl(this.flower.color),
             });
             this.amount = new Array(this.flower.inStock).fill(0).map((x, i) => i + 1);
