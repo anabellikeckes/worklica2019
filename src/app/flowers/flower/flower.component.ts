@@ -1,6 +1,7 @@
 import { Component, Input, EventEmitter, Output, OnInit } from '@angular/core';
 import { Flower } from '../../shared/models/flower';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { CurrencyPipe } from '@angular/common';
 
 @Component({
     selector: 'flower-component',
@@ -13,6 +14,9 @@ export class FlowerComponent implements OnInit {
     @Output() updateFlowerValues = new EventEmitter<Flower>();
     flowerForm: FormGroup;
     amount: Array<number>;
+    total: string;
+
+    constructor(private currencyPipe: CurrencyPipe) {}
 
     ngOnInit() {
         if (this.flower) {
@@ -25,6 +29,10 @@ export class FlowerComponent implements OnInit {
             });
             this.amount = new Array(this.flower.inStock).fill(0).map((x, i) => i + 1);
         }
+    }
+
+    calculateTotal() {
+        this.total = this.currencyPipe.transform(this.flowerForm.getRawValue().price * this.flowerForm.getRawValue().amount);
     }
 
     buy() {

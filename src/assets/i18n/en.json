@@ -18,6 +18,7 @@
         "IN_STOCK": "In stock",
         "COLOR": "Color",
         "BUY": "Buy",
-        "CANCEL": "Cancel"
+        "CANCEL": "Cancel",
+        "TOTAL" : "Total"
     }
 }

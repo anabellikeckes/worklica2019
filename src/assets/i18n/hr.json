@@ -18,6 +18,7 @@
         "IN_STOCK": "Na zalihi",
         "COLOR": "Boja",
         "BUY": "Kupi",
-        "CANCEL": "Odustani"
+        "CANCEL": "Odustani",
+        "TOTAL" : "Ukupno"
     }
 }
