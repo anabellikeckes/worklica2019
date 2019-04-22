@@ -11,7 +11,7 @@ import { AppComponent } from './app.component';
 import { FlowerTypeComponent } from './flower-type/flower-type.component';
 import { FlowersComponent } from './flowers/flowers.component';
 
-export function HttpLoaderFactory(http: HttpClient) {
+export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
@@ -28,7 +28,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
-        useFactory: HttpLoaderFactory,
+        useFactory: createTranslateLoader,
         deps: [HttpClient]
       }
     }),
