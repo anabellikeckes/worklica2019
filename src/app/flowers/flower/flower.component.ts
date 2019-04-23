@@ -32,7 +32,7 @@ export class FlowerComponent implements OnInit {
     }
 
     calculateTotal() {
-        this.total = this.currencyPipe.transform(this.flowerForm.getRawValue().price * this.flowerForm.getRawValue().amount);
+        this.total = this.currencyPipe.transform(this.flowerForm.getRawValue().price * this.flowerForm.getRawValue().amount, 'GBP');
     }
 
     buy() {
