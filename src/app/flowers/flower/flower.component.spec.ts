@@ -6,6 +6,7 @@ import { DebugElement } from '@angular/core';
 import { FlowerComponent } from './flower.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { ColorDirective } from 'src/app/shared/directives/color.directive';
+import { CurrencyPipe } from '@angular/common';
 
 describe('FlowerComponent', () => {
     let comp: FlowerComponent;
@@ -25,7 +26,8 @@ describe('FlowerComponent', () => {
                 FormsModule,
                 ReactiveFormsModule,
                 TranslateModule.forRoot()
-            ]
+            ],
+            providers: [CurrencyPipe]
         }).compileComponents().then(() => {
             fixture = TestBed.createComponent(FlowerComponent);
             comp = fixture.debugElement.componentInstance;
