@@ -13,7 +13,7 @@
       <tr *ngFor="let item of items">
         <th scope="row">{{item.id}}</th>
         <td>{{item.type}}</td>
-        <td><button *ngIf="item.id == 1" type="button" class="btn btn-info" (click)="buy()">{{'CHOOSE' | translate}}</button></td>
+        <td><button *ngIf="item.id == 1" type="button" class="btn btn-info" (click)="buy()">{{'FLOWER_TYPE.CHOOSE' | translate}}</button></td>
       </tr>
     </tbody>
   </table>

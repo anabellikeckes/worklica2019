@@ -21,7 +21,7 @@ export class FlowersComponent implements OnInit {
         this.translateService.get('FLOWER_TYPE.TYPES').subscribe(res => {
             this.items = [
                 { id: 1, name: 'Rose', price: 10, color: 'red', inStock: 0  },
-                { id: 2, name: 'Tulip', price: 8, color: 'violet', inStock: 5 }
+                { id: 2, name: 'Tulip', price: 8, color: 'purple', inStock: 5 }
             ];
         });
     }
