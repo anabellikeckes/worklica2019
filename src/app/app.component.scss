@@ -4,7 +4,7 @@ $borderColor: grey;
 
 .page-container {
 
-  background-color: $primaryColor;
+  background-image: linear-gradient( $primaryColor, $secondaryColor);
   min-height: 100vh;
 
   .container {
@@ -23,6 +23,7 @@ $borderColor: grey;
       .title {
         padding: 15px;
         text-align: center;
+        font-weight: normal;
       }
 
       .fa-language {
