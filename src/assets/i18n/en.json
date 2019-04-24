@@ -1,6 +1,7 @@
 {
+    "TITLE": "Flower Shop",
     "FLOWER_TYPE": {
-        "TITLE": "Shop by Type",
+        "TITLE": "Shop by type",
         "ID": "Id",
         "TYPE": "Type",
         "TYPES": {
