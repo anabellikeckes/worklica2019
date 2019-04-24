@@ -1,4 +1,6 @@
 {
+    "TITLE": "Cvjećara",
+    "FLOWER_LIST": "Lista cvijeća",
     "FLOWER_TYPE": {
         "TITLE": "Kupnja po tipu",
         "ID": "Id",
@@ -8,7 +10,7 @@
             "JAR": "Tagla",
             "SEEDLING": "Sjemenjače"
         },
-        "CHOOSE": "Choose"
+        "CHOOSE": "Odaberi"
     },
     "FLOWER" : {
         "ID": "Id",
@@ -18,6 +20,7 @@
         "IN_STOCK": "Na zalihi",
         "COLOR": "Boja",
         "BUY": "Kupi",
-        "CANCEL": "Odustani"
+        "CANCEL": "Odustani",
+        "TOTAL" : "Ukupno"
     }
 }

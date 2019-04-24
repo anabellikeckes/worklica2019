@@ -44,7 +44,6 @@ import {
   ]
 })
 export class AppComponent {
-  title = 'flower-shop';
 
   constructor(private translate: TranslateService) {
     translate.setDefaultLang('en');

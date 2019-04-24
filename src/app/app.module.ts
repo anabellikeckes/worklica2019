@@ -13,6 +13,7 @@ import { FlowerTypeComponent } from './flower-type/flower-type.component';
 import { FlowersComponent } from './flowers/flowers.component';
 import { FlowerComponent } from './flowers/flower/flower.component';
 import { ColorDirective } from './shared/directives/color.directive';
+import { CurrencyPipe } from '@angular/common';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -40,7 +41,7 @@ export function createTranslateLoader(http: HttpClient) {
     BrowserAnimationsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [CurrencyPipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

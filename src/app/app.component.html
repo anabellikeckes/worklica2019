@@ -3,8 +3,8 @@
     <div class="row">
       <div class="col-sm-12 col-md-12 col-lg-12">
         <h1 class="title">
-          <i class="fa fa-pagelines" style="color: darkcyan"></i>
-          Welcome to {{ title }}
+          <i class="fa fa-pagelines"></i>
+          {{'TITLE' | translate}}
         </h1>
         <i class="fa fa-language" (click)="changeLanguage()"></i>
         <div class="content-container" [@routeChange]="o.isActivated ? o.activatedRoute : ''">

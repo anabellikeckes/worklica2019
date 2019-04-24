@@ -4,22 +4,23 @@
         <input type="text" class="form-control" id="name" readonly formControlName="name">
     </div>
     <div class="form-group">
-        <label for="price">{{'FLOWER.PRICE' | translate}}</label>
-        <input type="number" class="form-control" id="price" readonly formControlName="price">
-    </div>
-    <div class="form-group">
         <label for="inStock">{{'FLOWER.IN_STOCK' | translate}}</label>
         <input type="number" class="form-control" id="inStock" readonly formControlName="inStock">
     </div>
     <div class="form-group">
         <label for="amount">{{'FLOWER.AMOUNT' | translate}}</label>
-        <select class="custom-select form-control" id="amountDropdown" formControlName="amount">
+        <select class="custom-select form-control" id="amountDropdown" formControlName="amount"
+            (change)="calculateTotal()">
             <option value="">Choose...</option>
-            <option *ngFor="let number of amount" [ngValue]="number">{{number}}</option>
+            <option *ngFor="let number of amount" [ngValue]="number" >{{number}}</option>
         </select>
     </div>
-    <!-- <div *ngIf="!flowerForm.valid">At least one order must be selected</div> -->
-    <button type="submit" class="btn btn-primary" (click)="buy()" [disabled]="flowerForm.invalid">{{'FLOWER.BUY' | translate}}</button>
+    <div class="form-group" *ngIf="flowerForm.valid">
+        <label for="total">{{'FLOWER.TOTAL' | translate}}</label>
+        <input type="text" class="form-control total" id="total" readonly [value]="total">
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="buy()"
+        [disabled]="flowerForm.invalid">{{'FLOWER.BUY' | translate}}</button>
     <button type="button" class="btn btn-secondary" (click)="cancel()">{{'FLOWER.CANCEL' | translate}}</button>
 </form>
 <div class="image">

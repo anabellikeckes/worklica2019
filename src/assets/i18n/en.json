@@ -1,6 +1,8 @@
 {
+    "TITLE": "Flower Shop",
+    "FLOWER_LIST": "List of flowers",
     "FLOWER_TYPE": {
-        "TITLE": "Shop by Type",
+        "TITLE": "Shop by type",
         "ID": "Id",
         "TYPE": "Type",
         "TYPES": {
@@ -18,6 +20,7 @@
         "IN_STOCK": "In stock",
         "COLOR": "Color",
         "BUY": "Buy",
-        "CANCEL": "Cancel"
+        "CANCEL": "Cancel",
+        "TOTAL" : "Total"
     }
 }

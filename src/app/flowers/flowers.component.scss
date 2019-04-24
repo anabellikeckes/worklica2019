@@ -1,6 +1,14 @@
+$primaryColor: darkcyan;
+
 .fa-arrow-left {
     font-size: 25px;
     padding: 30px;
+}
+
+h3 {
+    padding: 0px 30px 0px 30px;
+    font-weight: bold;
+    color: $primaryColor;
 }
 
 .table-responsive {
@@ -8,8 +16,7 @@
 }
 
 .flower-component {
-    margin: 30px 100px;
+    margin: 0px 30px;
     height: 55%;
     border: 1px solid lightgray;
-    border-radius: 20px;
 }
