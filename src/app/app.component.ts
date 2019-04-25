@@ -6,8 +6,9 @@ import {
   query,
   style,
   animate,
-  group
+  state
 } from '@angular/animations';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -15,35 +16,35 @@ import {
   styleUrls: ['./app.component.scss'],
   animations: [
     trigger('routeChange', [
-      transition('* => *', [
+      transition('* <=> *', [
+        // Set a default  style for enter and leave
         query(':enter, :leave', [
           style({
             position: 'absolute',
-            padding: '30px',
+            left: 0,
             width: '100%',
-            opacity: 1
+            opacity: 0,
+            transform: 'scale(0) translateY(100%)',
           }),
-        ],
-          { optional: true }),
+        ], { optional: true }),
+        // Animate the new page in
         query(':enter', [
-          style({ opacity: 0 })
-        ],
-          { optional: true }),
-        group([
-          query(':leave', [
-            animate('700ms ease-out', style({ opacity: 0 }))
-          ],
-            { optional: true }),
-          query(':enter', [
-            animate('700ms ease-out', style({ opacity: 1 }))
-          ],
-            { optional: true })
-        ]),
+          animate('600ms ease', style({ opacity: 1, transform: 'scale(1) translateY(0)' }))
+        ], { optional: true })
       ])
+    ]),
+
+    trigger('rotatedState', [
+      state('default', style({ transform: 'rotate(0)' })),
+      state('rotated', style({ transform: 'rotate(-360deg)' })),
+      transition('rotated => default', animate('400ms ease-out')),
+      transition('default => rotated', animate('400ms ease-in'))
     ])
   ]
 })
 export class AppComponent {
+
+  state = 'default';
 
   constructor(private translate: TranslateService) {
     translate.setDefaultLang('en');
@@ -51,6 +52,7 @@ export class AppComponent {
   }
 
   changeLanguage() {
+    this.state = (this.state === 'default' ? 'rotated' : 'default');
     this.translate.currentLang === 'en' ? this.translate.use('hr') : this.translate.use('en');
   }
 }
