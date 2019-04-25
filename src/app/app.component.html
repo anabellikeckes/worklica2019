@@ -6,7 +6,7 @@
           <i class="fa fa-pagelines"></i>
           {{'TITLE' | translate}}
         </h1>
-        <i class="fa fa-language" (click)="changeLanguage()"></i>
+        <i class="fa fa-language" (click)="changeLanguage()" [@rotatedState]="state"></i>
         <div class="content-container" [@routeChange]="o.isActivated ? o.activatedRoute : ''">
           <router-outlet #o="outlet"></router-outlet>
         </div>
