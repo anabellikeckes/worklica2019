@@ -8,7 +8,6 @@ import {
   animate,
   state
 } from '@angular/animations';
-import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
