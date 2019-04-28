@@ -1,11 +1,7 @@
-# FlowerShop Flower
+# FlowerShop UT
 
-## create new component
+## testing
 
-1. create <b>flower</b> folder inside flowers folder and inside this folder create the following:
-  - flower.component.ts
-  - flower.component.html
-  - flower.component.scss
+1) import needed imports into app.component.spec.ts
 
-
-## directive
+2) create flower.component.spec.ts folder inside <b>flower</b> file  and write corresponding tests 
