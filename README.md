@@ -101,7 +101,7 @@ imports: [
         "TYPE": "Tip",
         "TYPES": {
             "BOUQUET": "Buket",
-            "JAR": "Tagla",
+            "JAR": "Tegla",
             "SEEDLING": "Sjemenjače"
         }
     }
