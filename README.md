@@ -3,16 +3,13 @@
 
 ## create new component
 
-1) create folder <b>flower-type</b> and inside this folder create the following:
-  - flower-type.component.ts
-  - flower-type.component.html
-  - flower-type.component.scss
+1. run the two following commands:
+ - <b>cd src/app</b> 
+ - <b>ng genetare component flower-type</b>
   
-2) add <b>FlowerTypeComponent</b> to app.component.ts 
+2. create <b>shared</b> folder and run <b>ng generate class flower-type</b>
 
-3) create <b>shared</b> folder and flower.type.ts file
-
-4) copy the following code to flower-type.scss
+3. copy the following code to flower-type.component.scss
 
 ```` $primaryColor: darkcyan;
 
@@ -25,8 +22,9 @@ color: $primaryColor;
 padding: 30px;
 } 
 ````
-5) add items array inside flower-type.component.ts file
-6) copy the following code into flower-type.component.html
+4. add items array inside flower-type.component.ts file
+
+5. copy the following code into flower-type.component.html
 
 ````
 <h3>Flower Shop</h3>
@@ -50,10 +48,11 @@ padding: 30px;
 
 ## i18n 
 
-1) <b>install</b> 2 fallowing packages: 
+1. <b>install</b> 2 following packages: 
   - "@ngx-translate/core": "11.0.1",
   - "@ngx-translate/http-loader": "4.0.0"
-2) add modules into app.module.ts
+  
+2. add modules into app.module.ts
 
 ````
 export function createTranslateLoader(http: HttpClient) {
@@ -70,7 +69,7 @@ imports: [
     })
 ]
 ````
- 3) add 2 json files inside assets/i18n folder
+ 3. add 2 json files inside <b>assets/i18n</b> folder
  
  en.json: 
  
@@ -108,13 +107,14 @@ imports: [
 }
  ````
  
- 3) set default language in app.component.ts
+ 4. set default language in app.component.ts
  
- 4) modify html files so that they use translation
+ 5. modify html files so that they use translation
  
- 5) add in app.component.html the following: 
+ 6. add in app.component.html the following: 
+
  ````<i class="fa fa-language" (click)="changeLanguage()"></i>````
  
- 6) add method <b>changeLanguage()</b> in app.component.ts
+ 7. add method <b>changeLanguage()</b> in app.component.ts
  
- 7) add <b>onLangChange</b> event in flower-type.component.ts
+ 8. add <b>onLangChange</b> event in flower-type.component.ts (translate event)
