@@ -8,7 +8,7 @@
 
 2. import ReactiveFormsModule
 
-3. copy flowers.scss
+3. copy to flowers.scss file the following:
 
 ````
 .flower-component {
