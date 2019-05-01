@@ -2,16 +2,15 @@
 
 ## create new component
 
-1. create folder <b>flowes</b> and inside this folder create the following:
-  - flowers.component.ts
-  - flowers.component.html
-  - flowers.component.scss
+1. run the two following commands:
+ - <b> cd src/app </b>
+ - <b> ng generate component flowers </b>
   
-2. add FlowerTypeComponent to app.component.ts and add routing for flowers component
+2. add routing for <b>FlowersComponent</b>
 
-3. add <b>button</b> & <b>method</b> to flower-type.component that redirects to to the flowers component
+3. add <b>button</b> & <b>method</b> to flower-type.component that <b>redirects</b> to to the flowers component
 
-4. inside shared folder create Flower class (flower.ts file)
+4. inside shared folder create Flower class like: <b>ng generate class flower</b>
 
 5. add the following code to flowers.component.scss
 
