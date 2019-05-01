@@ -2,16 +2,13 @@
 
 ## create new component
 
-1. create <b>flower</b> folder inside flowers folder and inside this folder create the following:
-  - flower.component.ts
-  - flower.component.html
-  - flower.component.scss
+1. run the two following commands:
+ - <b> cd src/app/flowers</b>
+- <b> ng generate component flowers</b>
 
-2. add new component to app.module
+2. import ReactiveFormsModule
 
-3. import ReactiveFormsModule
-
-4. copy flowers.scss
+3. copy flowers.scss
 
 ````
 .flower-component {
@@ -21,9 +18,9 @@ border: 1px solid lightgray;
 }
 ````
 
-5. add code to flowers.component.html & flowers.component.ts regarding flower component
+4. add code to flowers.component.html & flowers.component.ts regarding flower component
 
-6. copy code to flower.component.scss file
+5. copy code to flower.component.scss file
 
 ````
 form {
@@ -47,9 +44,9 @@ margin: 15px 5px;
 }
 ````
 
-7. fill the localization files 
+6. fill the localization files 
 
-  7.1. en.json
+  6.1. en.json
 
 ````
 "AMOUNT": "Amount",
@@ -58,7 +55,7 @@ margin: 15px 5px;
 "TOTAL" : "Total"
 ````
 
-  7.2. hr.json
+  6.2. hr.json
 ````
 "AMOUNT": "Količina",
 "BUY": "Kupi",
@@ -66,7 +63,7 @@ margin: 15px 5px;
 "TOTAL" : "Ukupno"
 ````
 
-8. copy following code to flower.component.html
+7. copy following code to flower.component.html
 
 ````
 <form class="form" [formGroup]="flowerForm" *ngIf="flowerForm">
@@ -96,22 +93,20 @@ margin: 15px 5px;
 </form>
 ````
 
-9. write code to flower.component.ts
+8. write code to flower.component.ts
 
-10. add code to <b>onUpdateFlowerValues</b> method in flowers.component.ts 
+9. add code to <b>onUpdateFlowerValues</b> method in flowers.component.ts 
 
 
 ## directive
 
 1. change structure of models
 
-2. add new directive 
+2. add new directive like: <b>ng generate directive color</b>
 
 3. write code to directive
 
-4. add directive to app.module.ts
-
-5. add directive to fower.component.html like:
+4. add directive to flower.component.html like:
 
 ````
 <div class="image">
