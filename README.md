@@ -5,7 +5,7 @@
 
 1. run the two following commands:
  - <b>cd src/app</b> 
- - <b>ng genetare component flower-type</b>
+ - <b>ng generate component flower-type</b>
   
 2. create <b>shared</b> folder and run <b>ng generate class flower-type</b>
 
