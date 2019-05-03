@@ -120,6 +120,25 @@ imports: [
  
  5. modify html files so that they use translation
  
+ 5.1. flower-type.component.html
+ 
+ ````
+ {{'FLOWER_TYPE.ID' | translate}}
+ {{'FLOWER_TYPE.TYPE' | translate}}
+ ````
+ 5.2. flower-type.component.ts
+ 
+ ```````
+ this.translateService.get('FLOWER_TYPE.TYPES').subscribe(res => {
+
+this.items = [
+{ id: 1, type: res.BOUQUET },
+{ id: 2, type: res.JAR },
+{ id: 3, type: res.SEEDLING }
+];
+});
+ ```````
+ 
  6. add in app.component.html the following: 
 
  ````<i class="fa fa-language" (click)="changeLanguage()"></i>````
@@ -127,3 +146,13 @@ imports: [
  7. add method <b>changeLanguage()</b> in app.component.ts
  
  8. add <b>onLangChange</b> event in flower-type.component.ts (translate event)
+ 
+ ```````
+this.translateService.onLangChange.subscribe((event: LangChangeEvent) => {
+  this.items = [
+    { id: 1, type: event.translations.FLOWER_TYPE.TYPES.BOUQUET },
+    { id: 2, type: event.translations.FLOWER_TYPE.TYPES.JAR },
+    { id: 3, type: event.translations.FLOWER_TYPE.TYPES.SEEDLING }
+    ];
+});
+ ```````
