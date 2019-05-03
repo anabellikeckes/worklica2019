@@ -130,12 +130,11 @@ imports: [
  
  ```````
  this.translateService.get('FLOWER_TYPE.TYPES').subscribe(res => {
-
-this.items = [
-{ id: 1, type: res.BOUQUET },
-{ id: 2, type: res.JAR },
-{ id: 3, type: res.SEEDLING }
-];
+  this.items = [
+    { id: 1, type: res.BOUQUET },
+    { id: 2, type: res.JAR },
+    { id: 3, type: res.SEEDLING }
+  ];
 });
  ```````
  
