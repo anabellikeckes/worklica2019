@@ -93,7 +93,7 @@ margin: 15px 5px;
 </form>
 ````
 
-8. write code to flower.component.ts; create form & paste following methods:
+8. import CurrencyPipe (providers), write code to flower.component.ts; create form & paste following methods:
 
 ````
 calculateTotal() {
