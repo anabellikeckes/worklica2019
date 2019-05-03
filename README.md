@@ -93,7 +93,22 @@ margin: 15px 5px;
 </form>
 ````
 
-8. write code to flower.component.ts
+8. write code to flower.component.ts; create form & paste following methods:
+
+````
+calculateTotal() {
+   this.total = this.currencyPipe.transform(this.flowerForm.getRawValue().price * this.flowerForm.getRawValue().amount, 'GBP');
+ }
+
+buy() {
+     this.flower.inStock = this.flower.inStock - this.flowerForm.getRawValue().amount;
+     this.updateFlowerValues.emit(this.flower);
+ }
+
+cancel () {
+      this.updateFlowerValues.emit(this.flower);
+ }
+````
 
 9. add code to <b>onUpdateFlowerValues</b> method in flowers.component.ts 
 
