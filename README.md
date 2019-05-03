@@ -57,7 +57,6 @@ h3 {
         <th scope="col">{{'FLOWER.PRICE' | translate}}</th>
         <th scope="col">{{'FLOWER.IN_STOCK' | translate}}</th>
         <th scope="col">{{'FLOWER.COLOR' | translate}}</th>
-        <th scope="col"></th>
       </tr>
     </thead>
     <tbody>
