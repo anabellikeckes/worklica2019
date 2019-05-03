@@ -43,7 +43,7 @@ h3 {
 }
 ````
 
-6. add the following code to flowers.component.html
+7. add the following code to flowers.component.html
 
 ````<i class="fa fa-arrow-left" (click)="return()"></i>
 <h3>{{'FLOWER_LIST' | translate}}</h3>
@@ -72,7 +72,7 @@ h3 {
 </div>
 ````
 
-7. add the following code to flowers.component.ts
+8. add the following code to flowers.component.ts
 
 ````  items: Array<Flower>;
 
@@ -94,9 +94,9 @@ h3 {
         this.router.navigate(['']);
     }
   ````
-8. fill the localization files with:
+9. fill the localization files with:
 
-  8.1. en.json
+  9.1. en.json
   
   ````
       "FLOWER_LIST": "List of flowers",
@@ -112,7 +112,7 @@ h3 {
         "BUY": "Buy"
     }
   ````
-  8.2. hr.json
+  9.2. hr.json
   
   ````
       "FLOWER_LIST": "Lista cvijeća",
