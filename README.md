@@ -46,6 +46,15 @@ padding: 30px;
 </div> 
 ````
 
+6. add flower-type route in app-routing.module.ts
+
+```````
+const routes: Routes = [
+{ path: '', redirectTo: 'flower-type', pathMatch: 'full' },
+{ path: 'flower-type', component: FlowerTypeComponent }
+];
+```````
+
 ## i18n 
 
 1. <b>install</b> 2 following packages: 
