@@ -11,8 +11,8 @@
 
 3. copy the following code to flower-type.component.scss
 
-```` $primaryColor: darkcyan;
-
+```` 
+$primaryColor: darkcyan;
 h3 {
 padding: 50px 30px 0px 30px;
 font-weight: bold;
