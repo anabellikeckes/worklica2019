@@ -133,7 +133,7 @@ h3 {
   
 ## animation
 
-1. add <b>BrowserAnimationsModule</b> in app.module.ts
+1. add <b>BrowserAnimationsModule</b> in app.module.ts (@angular/platform-browser/animations)
 
 2. add the following code to the app.component.ts
 
