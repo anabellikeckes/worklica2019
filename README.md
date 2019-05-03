@@ -67,7 +67,6 @@ h3 {
         <td>{{item.price | currency:'GBP'}}</td>
         <td>{{item.inStock}}</td>
         <td><i class="fa fa-circle" [ngStyle]="{'color': item.color}"></i></td>
-        <td><button *ngIf="item.inStock > 0" type="button" class="btn btn-outline-info">{{'FLOWER.BUY' | translate}}</button></td>
       </tr>
     </tbody>
   </table>
