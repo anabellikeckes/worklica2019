@@ -14,7 +14,7 @@ import { TestBed, ComponentFixture, async } from '@angular/core/testing';
 import { DebugElement } from '@angular/core';
 import { FlowerComponent } from './flower.component';
 import { TranslateModule } from '@ngx-translate/core';
-import { ColorDirective } from 'src/app/shared/directives/color.directive';
+import { ColorDirective } from 'src/app/shared/color.directive';
 import { CurrencyPipe } from '@angular/common';
 
 describe('FlowerComponent', () => {
