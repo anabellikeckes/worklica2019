@@ -122,7 +122,7 @@ cancel () {
 
 ## directive
 
-1. change structure of models
+1. run cd src/app/shared
 
 2. add new directive like: <b>ng generate directive color</b>
 
@@ -132,7 +132,7 @@ cancel () {
 
 ````
 <div class="image">
-<i class="fa fa-leaf" myColor="{{flowerForm.controls.color.value}}"></i>
+  <i class="fa fa-pagelines" myColor="{{flowerForm.controls.color.value}}"></i>
 </div>
 ````
 5. run <i>ng serve</i>
