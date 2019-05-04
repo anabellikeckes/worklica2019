@@ -1,46 +1,46 @@
-# FlowerShop Flower
+# FlowerShop - Flower
 
 ## create new component
 
 1. run the two following commands:
  - <b> cd src/app/flowers</b>
-- <b> ng generate component flowers</b>
+- <b> ng generate component flower</b>
 
-2. import ReactiveFormsModule
+2. import ReactiveFormsModule (@angular/forms)
 
 3. copy to flowers.scss file the following:
 
 ````
 .flower-component {
-margin: 0px 30px;
-height: 55%;
-border: 1px solid lightgray;
+  margin: 0px 30px;
+  height: 55%;
+  border: 1px solid lightgray;
 }
 ````
 
-4. add code to flowers.component.html & flowers.component.ts regarding flower component
+4. add code to flowers.component.html & flowers.component.ts regarding <b>flower</b> component & add method to <b>buy</b> button
 
 5. copy code to flower.component.scss file
 
 ````
 form {
-width: 60%;
-float: left;
-padding: 15px;
-.total {
-color: darkcyan;
-text-align: end;
-font-weight: bolder;
-}
+  width: 60%;
+  float: left;
+  padding: 15px;
+  .total {
+   color: darkcyan;
+   text-align: end;
+   font-weight: bolder;
+  }
 }
 .image {
-width: 40%;
-padding: 40px 100px;
-float: left;
-font-size: 100px;
+  width: 40%;
+  padding: 40px 100px;
+  float: left;
+  font-size: 100px;
 }
 .btn {
-margin: 15px 5px;
+  margin: 15px 5px;
 }
 ````
 
@@ -50,7 +50,6 @@ margin: 15px 5px;
 
 ````
 "AMOUNT": "Amount",
-"BUY": "Buy",
 "CANCEL": "Cancel",
 "TOTAL" : "Total"
 ````
@@ -58,7 +57,6 @@ margin: 15px 5px;
   6.2. hr.json
 ````
 "AMOUNT": "Količina",
-"BUY": "Kupi",
 "CANCEL": "Odustani",
 "TOTAL" : "Ukupno"
 ````
@@ -67,29 +65,29 @@ margin: 15px 5px;
 
 ````
 <form class="form" [formGroup]="flowerForm" *ngIf="flowerForm">
-<div class="form-group">
-<label for="name">{{'FLOWER.NAME' | translate}}</label>
-<input type="text" class="form-control" id="name" readonly formControlName="name">
-</div>
-<div class="form-group">
-<label for="inStock">{{'FLOWER.IN_STOCK' | translate}}</label>
-<input type="number" class="form-control" id="inStock" readonly formControlName="inStock">
-</div>
-<div class="form-group">
-<label for="amount">{{'FLOWER.AMOUNT' | translate}}</label>
-<select class="custom-select form-control" id="amountDropdown" formControlName="amount"
-(change)="calculateTotal()">
-<option value="">Choose...</option>
-<option *ngFor="let number of amount" [ngValue]="number" >{{number}}</option>
-</select>
-</div>
-<div class="form-group" *ngIf="flowerForm.valid">
-<label for="total">{{'FLOWER.TOTAL' | translate}}</label>
-<input type="text" class="form-control total" id="total" readonly [value]="total">
-</div>
-<button type="submit" class="btn btn-primary" (click)="buy()"
-[disabled]="flowerForm.invalid">{{'FLOWER.BUY' | translate}}</button>
-<button type="button" class="btn btn-secondary" (click)="cancel()">{{'FLOWER.CANCEL' | translate}}</button>
+  <div class="form-group">
+   <label for="name">{{'FLOWER.NAME' | translate}}</label>
+    <input type="text" class="form-control" id="name" readonly formControlName="name">
+  </div>
+  <div class="form-group">
+    <label for="inStock">{{'FLOWER.IN_STOCK' | translate}}</label>
+    <input type="number" class="form-control" id="inStock" readonly formControlName="inStock">
+  </div>
+  <div class="form-group">
+    <label for="amount">{{'FLOWER.AMOUNT' | translate}}</label>
+    <select class="custom-select form-control" id="amountDropdown" formControlName="amount"
+    (change)="calculateTotal()">
+      <option value="">Choose...</option>
+      <option *ngFor="let number of amount" [ngValue]="number" >{{number}}</option>
+    </select>
+  </div>
+  <div class="form-group" *ngIf="flowerForm.valid">
+    <label for="total">{{'FLOWER.TOTAL' | translate}}</label>
+    <input type="text" class="form-control total" id="total" readonly [value]="total">
+  </div>
+  <button type="submit" class="btn btn-primary" (click)="buy()"
+    [disabled]="flowerForm.invalid">{{'FLOWER.BUY' | translate}}</button>
+  <button type="button" class="btn btn-secondary" (click)="cancel()">{{'FLOWER.CANCEL' | translate}}</button>
 </form>
 ````
 
@@ -110,7 +108,16 @@ cancel () {
  }
 ````
 
-9. add code to <b>onUpdateFlowerValues</b> method in flowers.component.ts 
+9. add following code to <b>onUpdateFlowerValues</b> method in flowers.component.ts 
+
+````
+  const findIndex = this.items.findIndex((obj => obj.id === updatedFlower.id));
+  // update items
+  this.items[findIndex] = updatedFlower;
+  this.visible = false;
+````
+
+10. run <i>ng serve</i>
 
 
 ## directive
@@ -128,4 +135,4 @@ cancel () {
 <i class="fa fa-leaf" myColor="{{flowerForm.controls.color.value}}"></i>
 </div>
 ````
-
+5. run <i>ng serve</i>
