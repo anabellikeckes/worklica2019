@@ -135,6 +135,8 @@ h3 {
     }
   ````
   
+10. run <i>ng serve</i> 
+  
 ## animation
 
 1. add <b>BrowserAnimationsModule</b> in app.module.ts (@angular/platform-browser/animations)
@@ -172,3 +174,6 @@ animations: [
 ````
 
 3. import needed imports, add corresponding events & code to app.component.html & app.component.ts
+
+4. run <i>ng serve</i> 
+
