@@ -28,7 +28,7 @@ h3 {
 5. copy the following code into flower-type.component.html
 
 ````
-<h3>Flower Shop</h3>
+<h3>Shop by type</h3>
  <div class="table-responsive">
    <table id="table" class="table table-striped table-bordered table-sm">
      <thead>
