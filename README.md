@@ -1,10 +1,12 @@
-# FlowerShop UT
+# FlowerShop - UT (Karma/Jasmine)
 
 ## testing
 
-1) import needed imports into app.component.spec.ts
+1. run <i>ng test</i>
 
-2) create flower.component.spec.ts folder inside <b>flower</b> file  and write corresponding tests 
+2. import needed imports into app.component.spec.ts
+
+3. create <b>flower.component.spec.ts</b> file inside <b>flower</b> folder and copy corresponding tests 
 
 ````
 import { BrowserModule, By } from '@angular/platform-browser';
@@ -62,4 +64,6 @@ describe('FlowerComponent', () => {
    });
 ````
 
-3. add another test (test when form is invalid)
+4. add another test (test when form is invalid)
+
+5. run <i>ng test</i>
