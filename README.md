@@ -8,7 +8,11 @@
   
 2. add routing for <b>FlowersComponent</b>
 
-3. add <b>button</b> & <b>method</b> to flower-type.component that <b>redirects</b> to to the flowers component
+3. copy following code & add <b>method</b> to flower-type.component that <b>redirects</b> to to the flowers component
+
+````
+<td><button *ngIf="item.id == 1" type="button" class="btn btn-info" (click)="buy()">{{'FLOWER_TYPE.CHOOSE' | translate}}</button></td>
+````
 
 4. inside shared folder create Flower class like: <b>ng generate class flower</b>
 
@@ -57,6 +61,7 @@ h3 {
         <th scope="col">{{'FLOWER.PRICE' | translate}}</th>
         <th scope="col">{{'FLOWER.IN_STOCK' | translate}}</th>
         <th scope="col">{{'FLOWER.COLOR' | translate}}</th>
+        <th scope="col"></th>
       </tr>
     </thead>
     <tbody>
@@ -66,6 +71,7 @@ h3 {
         <td>{{item.price | currency:'GBP'}}</td>
         <td>{{item.inStock}}</td>
         <td><i class="fa fa-circle" [ngStyle]="{'color': item.color}"></i></td>
+        <td><button *ngIf="item.inStock > 0" type="button" class="btn btn-outline-info">{{'FLOWER.BUY' | translate}}</button></td>
       </tr>
     </tbody>
   </table>
