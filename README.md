@@ -13,13 +13,14 @@
 
 ```` 
 $primaryColor: darkcyan;
+
 h3 {
-padding: 50px 30px 0px 30px;
-font-weight: bold;
-color: $primaryColor;
+  padding: 50px 30px 0px 30px;
+  font-weight: bold;
+  color: $primaryColor;
 }
 .table-responsive {
-padding: 30px;
+  padding: 30px;
 } 
 ````
 4. add items array inside flower-type.component.ts file
@@ -28,21 +29,21 @@ padding: 30px;
 
 ````
 <h3>Flower Shop</h3>
-<div class="table-responsive">
-<table id="table" class="table table-striped table-bordered table-sm">
-<thead>
-<tr>
-<th scope="col">Id</th>
-<th scope="col">Type</th>
-</tr>
-</thead>
-<tbody>
-<tr *ngFor="let item of items">
-<th scope="row">{{item.id}}</th>
-<td>{{item.type}}</td>
-</tr>
-</tbody>
-</table>
+ <div class="table-responsive">
+   <table id="table" class="table table-striped table-bordered table-sm">
+     <thead>
+       <tr>
+         <th scope="col">Id</th>
+         <th scope="col">Type</th>
+       </tr>
+     </thead>
+     <tbody>
+       <tr *ngFor="let item of items">
+         <th scope="row">{{item.id}}</th>
+         <td>{{item.type}}</td>
+         </tr>
+     </tbody>
+    </table>
 </div> 
 ````
 
@@ -54,6 +55,7 @@ const routes: Routes = [
 { path: 'flower-type', component: FlowerTypeComponent }
 ];
 ```````
+7. run <i>ng serve</i>
 
 ## i18n 
 
@@ -64,9 +66,14 @@ const routes: Routes = [
 2. add modules into app.module.ts
 
 ````
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
+
 imports: [
   HttpClientModule,
     TranslateModule.forRoot({
@@ -123,6 +130,8 @@ imports: [
  5.1. flower-type.component.html
  
  ````
+ {{'FLOWER_TYPE.TITLE' | translate}}
+ 
  {{'FLOWER_TYPE.ID' | translate}}
  {{'FLOWER_TYPE.TYPE' | translate}}
  ````
@@ -137,14 +146,29 @@ imports: [
   ];
 });
  ```````
+ 5.3. app.component.html 
+ 
+ ```````
+ 	{{'TITLE' | translate}}
+ ```````
  
  6. add in app.component.html the following: 
 
  ````<i class="fa fa-language" (click)="changeLanguage()"></i>````
  
- 7. add method <b>changeLanguage()</b> in app.component.ts
+ 7. add following code to app.component.scss
  
- 8. add <b>onLangChange</b> event in flower-type.component.ts (translate event)
+ ````
+ .fa-language {	
+	font-size: 30px;
+	float: right;
+	padding: 30px;
+}
+ ````
+ 
+ 8. add method <b>changeLanguage()</b> in app.component.ts
+ 
+ 9. add <b>onLangChange</b> event in flower-type.component.ts (translate event)
  
  ```````
 this.translateService.onLangChange.subscribe((event: LangChangeEvent) => {
@@ -155,3 +179,4 @@ this.translateService.onLangChange.subscribe((event: LangChangeEvent) => {
     ];
 });
  ```````
+ 10. run <i>ng serve</i>
